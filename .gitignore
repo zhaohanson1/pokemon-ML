@@ -112,3 +112,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+.vscode
+legends_never_die.ipynb
+test
+test.pdf
+notes
