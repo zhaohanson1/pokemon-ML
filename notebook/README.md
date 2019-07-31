@@ -74,19 +74,7 @@ df.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -264,19 +252,7 @@ df.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -453,19 +429,7 @@ df.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -641,19 +605,7 @@ df.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -833,19 +785,7 @@ df.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1022,7 +962,7 @@ df['percentage_female'].fillna(0, inplace = True)
 
 Group the Pokemon by power and physical features.
 
-Parameters: 
+Editable parameters: 
 * n_clusters: How many groups to create
 * random_state: Random seed
 
@@ -1128,7 +1068,7 @@ for i in range(n_clusters):
 X2 = X.copy(deep=True)
 X2["pokedex_number"]=poke_names
 
-# Example group
+# Example group: edit number to see different group
 X2[pred==6]
 ```
 
@@ -1136,19 +1076,7 @@ X2[pred==6]
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1302,7 +1230,9 @@ X2[pred==6]
 # Spectral Clustering
 
 A different method of unsupervised grouping
-
+Editable parameters:
+* n_clusters
+* random_state
 
 ```python
 from sklearn.cluster import SpectralClustering
@@ -1395,7 +1325,7 @@ for i in range(n_clusters):
 
 
 ```python
-# Example group
+# Example group: edit number to see different group
 X2[pred==5]
 ```
 
@@ -1403,19 +1333,7 @@ X2[pred==5]
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1815,40 +1733,6 @@ X2[pred==5]
   </tbody>
 </table>
 </div>
-
-
-
-
-```python
-""" 
-# Trying random projection/LFA on pokemon types to see if unsupervised learning can learn typings?
-
-from sklearn import random_projection
-from sklearn.decomposition import TruncatedSVD
-
-tsvd = TruncatedSVD(n_components=17)
-X_sparse_tsvd = tsvd.fit(both_type).transform(both_type)
-X_sparse_tsvd.shape
-
-transformer = random_projection.SparseRandomProjection()
-#X_new = transformer.fit_transform(both_type)
-"""
-```
-
-
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-24-faf9774954f0> in <module>
-          3 
-          4 tsvd = TruncatedSVD(n_components=17)
-    ----> 5 X_sparse_tsvd = tsvd.fit(both_type).transform(both_type)
-          6 X_sparse_tsvd.shape
-          7 
-    
-
-    NameError: name 'both_type' is not defined
 
 
 # BINARY CLASSIFICATION: 
@@ -2985,6 +2869,7 @@ dot_data = export_graphviz(clf.estimators_[np.random.randint(0,5001)], out_file=
                                class_names=np.array(['Not legendary', 'legendary']),
                                special_characters=True)
 
+#Sample tree
 graph = graphviz.Source(dot_data) 
 graph
 ```
