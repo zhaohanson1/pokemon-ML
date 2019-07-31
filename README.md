@@ -21,3 +21,5 @@ Some categories were one hot encoded, redundant identification was removed, and 
 * Logistic Regression: Fit the data to a logistic function
 * Decision Trees: "Multi-level" regression
 * Random Forests: Ensemble version of decision trees
+
+[/notebook](https://github.com/zhaohanson1/pokemon-ML/tree/master/notebook) contains sample notebook run.
